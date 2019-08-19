@@ -19,7 +19,60 @@
         <label for="lastName">Last Name</label>
         <input type="text" name="lastName" id="lastName" placeholder="Smith" required>
 
-        
+        <br> <br>
+
+
+        <!-- gender -->
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="male" value="male" required>
+
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="female" value="female">
+
+        <label for="other">Other</label>
+        <input type="radio" name="gender" id="other" value="other">
+      
+        <br><br>
+
+        <!-- email and password -->
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Your email" required>
+
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" required>
+
+        <br><br>
+
+        <!-- Birthday  -->
+        <label for="Birthday">Birthday</label>
+        <select name="day" id="Birthday" required>
+            <option value="">Day</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        <select name="month" required>
+                <option value="">Month</option>
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+        </select>
+        <select name="year" required>
+                <option value="">Year</option>
+                <option value="2001">2001</option>
+                <option value="2000">2000</option>
+                <option value="1999">1999</option>
+        </select>
+
+        <br><br>
+
+        <!-- terms and conditions -->
+         <label for="termsAndConditions">I agree to the <a href="http://www.google.com" target="_blank">terms and conditions</a></label>
+        <input type="checkbox" name="termsAndConditions" id="termsAndConditions" required>
+
+        <br><br>
+
+        <!-- submit -->
         <button>Submit</button>
     </form>
     
