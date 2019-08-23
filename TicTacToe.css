@@ -1,3 +1,31 @@
 h1 {
-    color: red;
+    text-align: center;
+}
+
+table {
+    margin: 50px auto;
+}
+
+td {
+    width: 70px;
+    height: 70px;
+    text-align: center;
+}
+
+td:nth-child(1) {
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+td:nth-child(2) {
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+td:nth-child(3) {
+    border-bottom: 1px solid black;
+}
+
+tr:nth-child(3) td {
+    border-bottom: 0px solid black;
 }
