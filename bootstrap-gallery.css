@@ -33,4 +33,6 @@
     background-image: url(https://images.unsplash.com/photo-1487018595641-1d19d69d2ea3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60);
 }
 
-.
+body {
+    padding-top: 70px;
+}
