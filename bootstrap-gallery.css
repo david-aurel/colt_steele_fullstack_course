@@ -36,3 +36,11 @@
 body {
     padding-top: 70px;
 }
+
+div .jumbotron {
+    color:black;
+}
+
+.navbar-default {
+    color: black;
+}
