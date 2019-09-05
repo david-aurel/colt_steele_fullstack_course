@@ -5,10 +5,14 @@ var secretNumber = 7;
 var userGuess = Number(prompt("Guess a number"));
 
 //check guess
-if ( userGuess > secretNumber) {
-    alert("Too high");
-} else if (userGuess < secretNumber) {
-    alert("Too low");
-} else if (userGuess === secretNumber) {
+if (userGuess === secretNumber) {
     alert("You got it right!");
+} 
+
+else if (userGuess < secretNumber) {
+    alert("Too low");
+}
+
+else {
+     alert("Too high");
 }
