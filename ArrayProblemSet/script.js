@@ -12,7 +12,7 @@ var array6 = [-5,100];
 // 1. Write a function printReverse() that takes an array as an argument and prints out the elements in the array in reverse order (don't actually reverse the array itself).
 
 function printReverse(array) {
-    for (i = array.length; i >= 0; i--) {
+    for (i = array.length -1; i >= 0; i--) {
         console.log(array[i]);
     };
 };
@@ -21,9 +21,9 @@ function printReverse(array) {
 //2. Write a function isUniform() which takes an array as an argument and returns true if all elements in the array are identical.
 
 function isUniform(array) {
-    for (i = 0; i < array.length - 1; i++) {
-        var item = array[i];
-        if (item !== array[i+1]) {
+    var item = array[0];
+    for (i = 1; i < array.length; i++) {
+        if (array[i] !== item) {
             return false;
         };
     };
@@ -35,9 +35,9 @@ function isUniform(array) {
 
 function sumArray(array) {
     var sum = 0;
-    for (i = 0; i < array.length; i++) {
-        sum += array[i];
-    };
+    array.forEach(function(element){
+        sum += element;
+    });
     return sum;
 };
 
@@ -45,8 +45,8 @@ function sumArray(array) {
 //4. Write a function max() that accepts an array of numbers and returns the maximum numbers in the array.
 
 function max(array) {
-    var maxVal = 0;
-    for (i = 0; i < array.length; i++) {
+    var maxVal = array[0];
+    for (i = 1; i < array.length; i++) {
         if (array[i] > maxVal) {
             maxVal = array[i];
         };
