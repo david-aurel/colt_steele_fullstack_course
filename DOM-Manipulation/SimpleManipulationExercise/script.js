@@ -15,15 +15,3 @@ btn.addEventListener("click", function(){
         isColored = false;
     }
 });
-// var button = document.querySelector("button");
-// var isColored = false;
-
-// btn.addEventListener("click", function(){
-// if(isColored){
-// document.body.style.background = "white";
-// isColored = false;
-// } else{
-// document.body.style.background = "blue";
-// isColored = true;
-// }
-// }); 
