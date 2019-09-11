@@ -1,21 +1,38 @@
 body {
-    background: #232323;
+    background: white;
+    margin: 0;
+    font-family: "avenir", "montserrat"
 }
 
 h1 {
     color: white;
+    text-align: center;
+    background: steelblue;
+    margin: 0;
+    padding: 20px 0;
+    font-weight: normal;
+    line-height: 1.1;
 }
+
+#colorDisplay {
+    font-size: 2em;
+}
+
 .square {
     width: 30%;
     background: purple;
     padding-bottom: 30%;
     float: left;
     margin: 1.66%;
+    border-radius: 50%;
+    transition: background .5s;
+    -webkit-transition: background .5s;
+    -moz-transition: background .5s;
 }
 
 #container {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 #stripe {
@@ -25,5 +42,29 @@ h1 {
 }
 
 .selected {
-    background : blue;
+    color: white;
+    background: steelblue;
+}
+
+button {
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    height: 100%;
+    font-weight: 700;
+    color: steelblue;
+    letter-spacing: 1px;
+    font-size: inherit;
+    transition: all .3s;
+}
+
+button:hover {
+    color: white;
+    background: steelblue;
+}
+
+  
+#message {
+    display: inline-block;
+    width: 20%;
 }

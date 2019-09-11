@@ -65,7 +65,7 @@ resetButton.addEventListener("click", function(){
      }
 
      //change h1 header background color back to normal
-     h1.style.backgroundColor = "#232323";
+     h1.style.backgroundColor = "steelblue";
 })
 
 //main thing to make the colors clickable, compare the clicked one to the solution and call external functions to do stuff if game is won or else
@@ -87,7 +87,7 @@ for (i = 0 ; i < squares.length; i++) {
              h1.style.backgroundColor = clickedColor;
         }
         else {
-            this.style.backgroundColor = "#232323";
+            this.style.backgroundColor = "white";
             messageDisplay.textContent = "Try Again"; 
         };
     }); 
