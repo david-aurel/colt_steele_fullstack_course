@@ -54,13 +54,19 @@ button {
     font-weight: 700;
     color: steelblue;
     letter-spacing: 1px;
+    outline: none;
     font-size: inherit;
     transition: all .3s;
+
 }
 
 button:hover {
     color: white;
     background: steelblue;
+}
+
+.hoverWon:hover {
+    background: white;
 }
 
   
