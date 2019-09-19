@@ -10,16 +10,25 @@
     <script src="paper-full.js" type="text/javascript"></script>
     <!-- Define inlined PaperScript associate it with myCanvas -->
     <script type="text/paperscript" canvas="myCanvas">
-	    // Create a Paper.js Path to draw a line into it:
-	    var path = new Path();
-        // Give the stroke a color
-        path.strokeColor = 'black';
-        var start = new Point(100, 100);
-        // Move to start and draw a line from there
-        path.moveTo(start);
-        // Note the plus operator on Point objects.
-        // PaperScript does that for us, and much more!
-        path.lineTo(start + [ 600, -50 ]);
+
+        var point = {x: 100, y:100}
+        var rgb = {r: 0, g:0, b:255}
+
+        for (i= 0; i < 264; i++){
+            var circle = new Path.Circle(new Point(point.x, point.y), 10);
+            circle.fillColor = "rgb(" + rgb.r + "," + rgb.g + "," + rgb.b + ")";
+            if (point.x <= 1100){
+                point.x += 50;
+            } else {
+                point.x = 100;
+                point.y += 50;
+            }
+            
+            rgb.r++;
+            rgb.b--;
+        };
+
+
     </script>
 
     <title>Patatap Clone</title>
