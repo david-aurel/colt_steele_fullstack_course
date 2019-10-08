@@ -1,0 +1,14 @@
+{
+  "name": "expressappexercise",
+  "version": "1.0.0",
+  "description": "express app exercise from the colt steele web developement course",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "david aurel",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
