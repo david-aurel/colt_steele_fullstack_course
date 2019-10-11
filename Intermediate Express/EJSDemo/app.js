@@ -1,16 +1,24 @@
 let express = require('express');
 let app = express();
 
+// also browse /public
+app.use(express.static('public'));
 
+// tell express we're using ejs
+app.set("view engine", "ejs"); 
+
+// home
 app.get("/", function(req, res){
-    res.render("home.ejs")
+    res.render("home")
 });
 
+// fall in love with
 app.get("/fallinlovewith/:thing", function(req, res){
     let thing = req.params.thing;  
-    res.render("love.ejs", {thingVar: thing});
+    res.render("love", {thingVar: thing});
 })
 
+// posts 
 app.get("/posts", function(req, res){
     let posts = [
         {title: "Post 1", author: "Susy"},
@@ -18,7 +26,7 @@ app.get("/posts", function(req, res){
         {title: "Post 3", author: "Anthony"}
     ];
 
-    res.render("posts.ejs", {posts: posts });
+    res.render("posts", {posts: posts });
 })
 
 
