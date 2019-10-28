@@ -12,3 +12,14 @@ function reverseString(str) {
 console.log('Reverse "Hello":')
 console.log(reverseString('Hello'))
 
+
+// 2. Fibonacci Number
+function fibonacci(num) {
+    if (num = 1) {
+        return num;
+    } else {
+        return fibonacci(num - 1) + fibonacci(num - 2)
+    }
+}
+
+console.log(fibonacci(13))
