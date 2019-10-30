@@ -1,5 +1,5 @@
 <% include partials/header %>
-
+ 
 <div class="container">
     <header class="jumbotron">
         <div class="container">
@@ -17,8 +17,8 @@
                 <div class="img-thumbnail">
                     <img src="<%= campground.image %>" width="100%">
                     <div class="caption text-center">
-                        <h4><%= campground.name %></h4>
-                    </div>
+                        <h4><a href="/campgrounds/<%= campground._id %>" style="color:black"><%= campground.name %></a></h4>
+                    </div>  
                 </div>
             </div>
         <% }) %>

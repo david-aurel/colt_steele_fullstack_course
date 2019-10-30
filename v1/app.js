@@ -19,15 +19,17 @@ app.set("view engine", "ejs");
 //SCHEMA SETUP
 let campgroundSchema = new mongoose.Schema({
  name: String,
- image: String
+ image: String,
+ description: String
 });
 
 let campground = mongoose.model("Campground", campgroundSchema);
 
 // campground.create({
 //     name: "Granite Hill",
-//     image: "https://cdn.pixabay.com/photo/2019/10/03/11/14/camp-4522970_1280.jpg"
-// }, function(err, campground){
+//     image: "https://cdn.pixabay.com/photo/2019/10/03/11/14/camp-4522970_1280.jpg",
+//     description: "This is a huge granite hill. No bathrooms, no water. Beautiful granite!"
+// }, function(err, campground){ 
 //     if(err){
 //         console.log(err);
 //     } else {
@@ -57,25 +59,25 @@ app.get("/", function(req, res){
     res.render("landing");
 });
 
-//campgrounds
+// INDEX - show all campgrounds
 app.get("/campgrounds", function(req, res){
     //get all campgrounds from db
     campground.find({}, function(err, allCampgrounds){
         if(err){
             console.log(err);
         } else {
-            res.render("campgrounds", {campgrounds: allCampgrounds});
+            res.render("index", {campgrounds: allCampgrounds});
         }
     })
 });
 
-//post campgrounds
+// CREATE - add new campgrounds to db
 app.post("/campgrounds", function(req, res){
-    res.send("You hit the post route!")
     //get data from form and add to campgrounds array
-    let name = req.body.name;
-    let image = req.body.image;
-    let newCampground = {name: name, image: image};
+    let name = req.body.name,
+        image = req.body.image,
+        desc = req.body.description;
+        newCampground = {name: name, image: image, description: desc};
     //get new campground and save to db
      campground.create(newCampground, function(err, newlyCreated){
          if(err){
@@ -89,9 +91,23 @@ app.post("/campgrounds", function(req, res){
 });
 
 
-//form for new campgrounds
+// NEW - show form to create new campground
 app.get("/campgrounds/new", function(req, res){
     res.render("new");
+});
+
+
+// SHOW - shows more information about one campground
+app.get("/campgrounds/:id", function(req, res){
+    //find the campground with provided id
+    campground.findById(req.params.id, function(err, foundCampground){
+        if (err){
+            console.log(err)
+        } else {
+            //render show template with that campground
+            res.render("show", {campground: foundCampground}); 
+        }
+    });
 });
 
 
