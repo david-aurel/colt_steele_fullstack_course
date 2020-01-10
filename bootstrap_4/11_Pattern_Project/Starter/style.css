@@ -1,0 +1,10 @@
+#header {
+    background-image: url("imgs/header.jpeg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card {
+    margin-bottom: 2rem;
+}
