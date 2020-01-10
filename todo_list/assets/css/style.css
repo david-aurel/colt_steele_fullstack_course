@@ -1,0 +1,72 @@
+h1 {
+    background: #ffd000;
+    color: white;
+    margin: 0;
+    padding: 10px 20px;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    height: 40px;
+    line-height: 40px;
+    margin-left: 10px;
+}
+
+input {
+    font-size: 18px;
+    background: white;
+    width: 100%;
+    padding: 13px 13px 13px 20px;
+    box-sizing: border-box;
+    color: #ffd000;
+    border: 3px solid #ffd000;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+span {
+    height: 40px;
+    width: 0px;
+    display: inline-block;
+    text-align: center;
+    color: red;;
+    opacity: 0;
+    transition: .2s linear;
+}
+
+li:hover span{
+    opacity: 1;
+    width: 40px;
+}
+
+body {
+    font-family: Roboto;
+    background: #B993D6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #8CA6DB, #B993D6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #8CA6DB, #B993D6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.fa-edit {
+    float: right;
+}
+
+#container {
+    background: white;
+    width: 360px;
+    margin: 100px auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1)
+}
+
+.completed {
+    color: grey;
+    text-decoration: line-through;
+}
